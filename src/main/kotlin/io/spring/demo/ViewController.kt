@@ -20,4 +20,17 @@ class ViewController {
         return "index"
     }
 
+    @GetMapping("/react")
+    fun react(model: Model): String {
+        model.addAttribute("users", listOf(
+                User("Juergen", "Hoeller"),
+                User("Rossen", "Stoyanchev"),
+                User("Brian", "Clozel"),
+                User("Stéphane", "Nicoll"),
+                User("Arjen", "Poutsma"),
+                User("Sébastien", "Deleuze")
+        ))
+        return "react"
+    }
+
 }
